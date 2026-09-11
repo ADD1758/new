@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+<meta charset="UTF-8">
+    <meta name="viewport" 
+                 content="width=device-width,
+     initial-scale=1.0">
+     <title>mina's miel</title>
+     <style>
+        /* *{padding:0;
+        margin:0;
+    box-sizing: border-box;  }
+
+    .list{display: flex;
+    justify-content: space-between;
+list-style: none;
+width: 50%;}
+
+nav{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+#menu{display:none;}
+
+@media(max-width:400px){
+    nav{position: relative;}
+
+    #menu{
+        display:flex;
+        background: transparent;
+        border: none; 
+    }
+
+    .list{
+        display: none;
+        position:absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(232, 233, 233);
+
+    }
+
+    .list li{
+        padding: 20px;
+    }
+
+    .active{display: flex;}
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#menu{
+    display: none;
+ 
+}
+.list{
+    display: flex;
+    
+ 
+    justify-content: space-between;
+  align-items: center;
+    width: 50%;
+    height: 8vh;
+    list-style: none;
+
+}
+
+nav{
+  padding: 0;
+    display: flex; 
+    
+    justify-content: space-between;
+    align-items: center;
+      background-color: blanchedalmond;
+      width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    position: relative;
+    right: 16px;
+  
+}
+section{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(246, 246, 240);
+    text-align:justify;
+}
+
+#section2{
+    background-color: white;
+    flex-direction: column;
+}
+.box{width: 75%;
+    height: 20vh;
+    background-color: green;
+}
+button{
+    padding: 10px;
+    margin: 5%;
+}
+
+p{margin:20px ;
+}
+
+
+@media(max-width:600px){
+    #menu{
+        display: flex;
+        position: absolute;
+        right: 30px;
+        background: transparent;
+           border: none;
+
+    }
+    .list  {display: none;}
+   
+
+
+nav{
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  border: none;
+      background-color: blanchedalmond;
+    width: 100%;
+    height:10vh ;
+}
+.active{
+    width: 75%;
+    height: 20vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+}
+
+     </style>
+    </head>
+    
+    <body>
+        <header>
+            <!-- <nav>
+                <div>logo</div>
+                <button id="menu">☰</button>
+                <ul class="list">
+                    <li>item1</li>
+                <li>item2</li>
+             <li>item3</li> 
+             <li>item4</li>
+            </ul>
+            </nav> -->
+
+<nav>
+    <div> <h2>Mina's Miel</h2>
+        
+   </div> 
+    <button id="menu">☰</button>
+    <ul class="list">
+        <li><a href="section1">conctats</a></li>
+        <li><a href="section2">Nos produits</a></li>
+        <li><a href="section3">FaQ</a></li>
+    </ul>
+</nav>
+
+        </header>
+        <main>
+            <section id="section1">
+                 <div>
+                    <p>Librairie indépendante — Alger <br>
+ Un livre bien choisi tient compagnie longtemps. <br> 
+Chez Page & Pine, chaque rayon est composé à la main.<br> Romans, essais et livres jeunesse, sélectionnés par des libraires qui les ont vraiment lus. </p>
+<button><a href="">Voir la selection</a></button>
+                 </div>
+                <img src="data:image/webp;base64,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"
+     alt="logo">
+            </section>
+
+            <section id="section2">
+                <p>Depuis 2016
+Une librairie, pas un entrepôt.
+
+Page & Pine est née dans un garage de Chéraga avec deux étagères et beaucoup trop de cafés. 
+Aujourd'hui encore, chaque titre passe entre les mains d'un libraire avant d'arriver en rayon.
+
+Pas d'algorithme pour choisir ce qu'on vous propose.
+Juste des gens qui lisent, et qui se trompent parfois — mais rarement. </p>
+ <div class="box">
+    
+2016
+    Année d'ouverture
+4 200+
+    Titres en rayon
+3
+    Libraires à temps plein 
+ </div>
+            </section>
+
+            <section id="section3">
+                <h4>Questions fréquentes</h4>
+<div>
+Oui. Si un titre n'est pas en rayon, on le commande — comptez 5 à 10 jours selon l'éditeur</div>
+<span>
+Oui, on le met de côté 48h à votre nom. Passé ce délai, il retourne en 
+</span>
+
+            </section>
+
+        </main>
+        <footer></footer>
+        <script>
+            // let menu=document.querySelector("#menu")
+            // let list=document.querySelector(".list")
+            // menu.addEventListener("click",()=>{
+            //     list.classList.toggle("active")
+            //     if(list.classList.contains("active")){
+            //         menu.textContent="x"
+            //     }else{
+            //         menu.textContent="☰"
+            //     }
+            // })
+
+
+let menu= document.querySelector("#menu")
+let list= document.querySelector(".list")
+menu.addEventListener("click",()=>{
+    list.classList.toggle("active")
+    if(list.classList.contains("active")){
+        menu.textContent="X"
+    }else{
+        menu.textContent="☰"
+    }
+
+})
+        </script>
+    </body>
+</html>
