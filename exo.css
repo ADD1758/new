@@ -1,0 +1,137 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.corps{
+    width: 75%;
+    height: 1500px;
+    background-color: bisque;
+border-radius: 20px;
+}
+header{
+    text-decoration: underline; 
+color: navy;
+font-size: 50px;
+}
+#name{
+    color: rgb(5, 26, 70);
+ 
+}
+#profile{
+width: 150px;
+height: 150px;
+    border: 4px solid blue;
+    border-radius: 50%;
+
+}
+.box1{
+    background-color: rgb(186, 181, 181);
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+margin : 20px 10px 20px 10px ; /*top right bottom left espace autour exterieur padding espace inerireur*/
+
+
+padding-left: 40px ;
+}
+ .box{
+    width: 200px;
+    height: 100px;
+    background-color: rgb(182, 246, 243);
+   border-radius: 20px;
+    
+ }
+ .ibox1{
+    color:  rgb(4, 101, 96);
+ }
+ .liens{
+    color:  rgb(4, 101, 96);
+ }
+ 
+ .box3{
+    width: 200px;
+    height: 250px;
+    background-color: brown;
+background-size: 50%; 
+border-radius: 30px;
+}
+ol{
+    list-style: none;
+}
+h3{font-size: 20px;
+    font-weight: bold;
+}
+#info{
+    color: yellow;
+    text-decoration: underline;
+ text-align: center;}
+ 
+ #section3{
+    background-image:  url("oman.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+ }
+ span{
+    color: blue;
+    font-size: 20px;
+ }
+ #nav {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 60%;
+    justify-content: space-between;
+    list-style: none;
+padding-left: 0; 
+}
+ 
+nav{
+    display: flex;
+    background-color: beige;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 30px;
+    /*transform: translate(100px, 10px) scale(0.2) rotate(40deg);*/
+}
+
+#left{display: flex;
+align-items: center;
+width: 14%;
+justify-content: space-between;}
+
+#image{
+    margin-right: 20px;
+}
+#image:hover{
+    transform: scale(1.5) ;
+transition: all  3s ease;
+
+}
+h1:focus{
+    background: blue;
+    color: white;
+}
+input:active{
+    border: 1px solid gold;
+}
+input:required{
+    border-radius: 20%;
+    background-color: brown;
+}
+li:first-child{ color: red;
+
+}
+li:nth-child(2){
+background: black;
+color: beige;
+}
+li:last-child{ background: gray;}
+
+#sect4{
+    display: flex;
+    gap: 150px;
+}

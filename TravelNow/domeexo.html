@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+<meta charset="UTF-8">
+    <meta name="viewport" 
+                 content="width=device-width,
+     initial-scale=1.0">
+    </head>
+    <title>exo</title>
+
+    <body>
+        <header></header>
+        <main>
+           <!-- <div id="carte">
+  <h2 id="nom">Produit</h2>
+  <p class="prix">0 DA</p>
+  <img id="image" src="produit.jpg" alt="produit" />
+</div>
+
+<ul id="liste"></ul> -->
+<section>
+    <h1>Catalogue de produits</h1>
+    <div>
+        <p></p>
+        <p></p>
+    </div>
+
+    <div id="catalogue"></div>
+</section>
+        </main>
+        <footer></footer>
+        <!-- <style>
+            body{
+                background-color: lightgray;
+            }
+        </style> -->
+        
+<script>
+         document.body.style.backgroundColor="ligthgray";
+   
+  
+    let tableau= [{id:1,nom:"sac a dos",prix:"3500 DA", stock:12,image: "sac-a-dos.jpg"},
+        {id:2,nom:"stylo a plumes",prix:"800 DA", stock:0,image: "sac-a-dos.jpg"},
+        {id:3,nom:"cahier A4",prix:"250 DA", stock:40,image: "sac-a-dos.jpg"},
+        {id:4,nom:"calculatrice",prix:"2200 DA", stock:5,image: "sac-a-dos.jpg"}
+    ]
+    
+
+  let catalogue= document.querySelector("#catalogue")
+
+   
+    tableau.forEach((e) => {
+        let div= document.createElement("div")
+        div.classList.add("carte")
+        let titre= document.createElement("h3")
+        // div.append(titre)
+        titre.textContent=e.nom
+        let prix= document.createElement("h4")
+        prix.textContent=e.prix
+        let stock= document.createElement("h4")
+        stock.textContent= e.stock
+
+         let image= document.createElement("img")
+        image.setAttribute("src",e.image)
+
+        div.append(titre,image,prix,stock)
+        catalogue.append(div)
+        catalogue.style.display="grid"
+        catalogue.style.gridTemplateColumns="repeat(3,1fr)"
+        catalogue.style.gap= "20px"
+
+
+        
+  if(e.id===1){
+            
+       
+  div.style.border = "2px solid blue";
+            }
+    
+       if(e.stock===0){
+        let div2= document.createElement("div2")
+        div2.style.backgroundColor="beige"
+        div2.textContent="bientot de retour"
+        catalogue.append(div2)
+       }
+
+    
+
+            if(e.stock=== 0){
+                div.classList.add("rupture")            };
+       
+
+    
+
+
+    
+        let div3=document.createElement("div")
+        let s=tableau.reduce((s,i)=>{
+            return s+(i.prix*i.stock)
+        },0)
+        div3.append(s)
+        
+        });
+
+      
+
+
+    
+
+       
+
+</script>
+    </body>
+</html>
+

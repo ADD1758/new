@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+    site
+</title>
+</head>
+<body>
+    <header>
+<nav>
+
+</nav>
+</header>
+
+    <section>
+<h1>my dream vacation</h1>
+<p>Welcome to my dream destination</p>
+    <hr>
+    <br>
+    <h2>About Oman</h2>
+  <p>Le Sultanat d'Oman est un État souverain situé à l'extrémité sud-est de la péninsule arabique.
+     Célèbre pour sa riche histoire maritime, ses spectaculaires montagnes côtoyant le désert et son extraordinaire sécurité,
+      ce pays du Moyen-Orient allie traditions bédouines et modernité
+</p>
+<img src="oman.jpeg" alt="image">
+<br>
+
+<a href="">learn more about oman</a>
+    </section>
+
+<hr>
+<section>
+<h2>Things i want to do</h2>
+<ol>
+    <li>visit mutrah souk</li>
+    <li>swim at Bimmah Sinkhole</li>
+    <li>camp at nizwa</li>
+</ol>
+<br>
+<h2>Things i will bring</h2>
+<ul>
+    <li>camera</li>
+    <li>passeport</li>
+    <li>suitcase</li>
+</ul>
+</section>
+
+
+    
+         
+<hr>
+<section>
+    <form>
+        
+    <h2><strong>Book my trip</strong></h2>
+
+    <label for="inputtext">Full name</label>
+    <br>
+    <input type="text" id="inputtext" placeholder="entrez votre nom"/>
+    <br><br><br>
+    <label for="id3">email</label>
+    <br>
+    <input type="email" id="id3" placeholder="email"/>
+    <br><br><br>
+    
+<label for="">passeport</label>
+<input type="password"/>
+<br><br><br>
+<label for="" >Number of travelers</label>
+<br>
+<input type="number">
+<br><br>
+<input type="checkbox">
+    <label for="i1">i accept the travel rules</label>
+    <br><br><br><br>
+    <h2>choose your ticket</h2>
+  <label for="id2">economy</label>
+  <br>
+    <input type="radio" id="i2" name="ticket"/>
+<br><br><br>
+<label for ="id2">business</label>
+<br>
+<input type="radio" name="ticket"/>
+<br><br><br>
+<button>book now</button>
+<br><br>
+<textarea name="" id="" rows="15" cols="50" placeholder="ecrivez">write a message</textarea>
+<br><br>
+<button>envoyer</button>
+</section>
+<hr>
+</form><
+<section>
+    <h2>About you</h2>
+<textarea rows="20" cols="30" 
+placeholder="write a few sentences about yourself">
+tell us about yourself</textarea><br><br>
+    <table border="1">
+     <tr>
+<th>date</th>
+<th>time </th>
+<th>subject</th>
+    </tr>
+
+      <tr>
+        <td>saturday</td>
+        <td>09:00</td>
+        <td>html</td>
+    </tr>
+
+    <tr>
+        <td>sunday</td>
+        <td>09:00</td>
+        <td>css</td>
+    </tr>
+    <tr>
+        <td>monday</td>
+        <td>09:00</td>
+    </tr>
+
+    <iframe width="560"
+     height="315"
+      src="https://www.youtube.com/embed/WjJ3mx2qv1o?autoplay=1&mute=1"
+       title="YouTube video player"
+       frameborder="0" allow="accelerometer; autoplay=1&mute=1"    
+       allow="autoplay;encrypted-media" clipboard-write; 
+       encrypted-media; gyroscope; picture-in-picture;
+        web-share" referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen></iframe>
+  <br> <br> <br>
+<video style="width:300.px"><source src="video.mp4"></video> this video
+</table>
+</section>  
+<br> <br><br>
+<section>
+<h2>Programming level</h2>
+<p> choose your level</p>
+<select options="id=level">
+<option>Select your level</option>
+<option>Beginer</option>
+<option>intermediaire</option>
+<option>advanced</option>
+</select>
+
+<h2>About you</h2>
+<textarea rows="20" cols="30">tell us about yourself</textarea>
+</section>
+
+<br>
+
+
+</main>
+    <footer>
+        Created by me-2026
+    </footer>
+    
+</body>
+</html>
+css
+container{
+    display: grid;
+    grid-template-columns =flex
+    gap: val;}
+
+    position
+    relative: bouge un peu a gauche droide en haut ou en bas, ne pas depasser 1000px
+    .nom class{
+        position: relative;
+        left: valpx;bottom:valpx;top
+    };  
+    ststic: bouge pas par defaut;
+    absolute: 
+    bouge n'importe ou et si parent relatif mouvement reduit 
+    sticky: bouge seulement dans le parent(bloc qui l'englobe) en fonction des val donnee
+    EX top:50px donc bougeras quand espace entre notre element et le top sera =50 px

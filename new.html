@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <header>
+
+    </header>
+
+ <!-- <main><section> 
+    <h1 id="titre">hello</h1>
+    <p class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus eaque fugiat nostrum, aspernatur, perferendis obcaecati soluta tempore excepturi autem id repellat, unde rerum? Adipisci itaque odit qui distinctio? Consectetur, inventore.</p>
+    <button >test</button>
+<button class="btn">Click here</button>
+</section>
+<section><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil consequatur numquam ut accusantium delectus, repellat mollitia qui optio cupiditate sint, corrupti neque porro officia aperiam quibusdam cum error nesciunt id!</p>
+</section>
+
+<section>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum fugit officia dolores, iusto inventore quisquam excepturi dolore. Quo aliquid eum tenetur, nam autem blanditiis possimus minima. Tenetur dolores soluta sapiente.</p>
+</section>
+
+<section >
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia earum consequuntur at voluptatibus porro repellendus veniam accusamus, error tempore, molestiae aspernatur veritatis, ullam maxime quibusdam. Id cupiditate magni ea quia.</p>
+
+</section> -->
+<!-- 
+<ul id="list">
+    <li>item1</li>
+    <li id="milieu">item2</li>
+    <li>item3</li>
+</ul>
+
+
+<section id="sect4">
+<img src="ySJ7EKAa.jpg" alt="poissons">
+
+    <h1 id="tst1"> test</h1>
+    <h2 id="ts">test2</h2>
+
+</section> 
+
+<section>
+    <button class="btn"> click here</button>
+    <div class="element">
+        <h1>title</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem quae recusandae molestias accusamus deleniti neque consectetur eos itaque ex iusto, ullam magnam necessitatibus nesciunt mollitia blanditiis molestiae totam similique voluptate.</p>
+        <input type="text" id="text">
+        <button class="btn2">remove</button>
+
+    </div>
+
+    <div>
+        <form id="formulaire">
+            <input type="text" id="texte">
+            <button type="submit">send</button>
+        </form>
+    </div>
+
+</section> -->
+<!-- 
+<section>
+  <form action="" id="form">
+        <input type="text" name="" id="email"
+        placeholder=""enter your Email required>
+        <button type="submit">s'inscrire</button>
+
+    </form>
+    <p id="message"></p> 
+
+    <form action="" id="form">  
+        <ul id="todolist">
+        <li id="st">first</li>
+        <li id="nd">second</li>
+        <li id="rd">third</li>
+          </ul>
+        <input type="text"  id="entree" placeholder="entrez l'element  a ajouter">
+        <button type="submit">Ajouter</button>
+        
+    </form>
+  
+
+</section> -->
+
+<section>
+<input type="text" id="serch" placeholder="search te country name">
+<button id="searchbtn">chercher</button>
+<div id="result"></div>
+</section>
+</main>
+<script>
+
+    let input=document.querySelector("#search")
+    let btn=document.querySelector("#searchbtn")
+    let result= document.querySelector("#result")
+    btn.addEventListener("click", ()=>{
+        let value= input.value.trim()
+        if(value===""){
+            result.innerHTML="<p> entrez un nom de pays </p>"
+            try{
+            //     const reponse= await fetch("https://countriesnow.space/api/v0.1/countries/capital",
+            //        {method:"POST",
+            //        headers:{'Content-type':"application/json"},
+            //        body:JSON.stringify({country:nom})
+                        
+            // })
+              reponse = await fetch(`https://countriesnow.space/api/v0.1/countries/capital/ q?country=${nom}`)
+        console.log(reponse)
+        let donnees= await reponses.json()
+        console.log(donnees)
+        
+         result.innerHTML=`<h3> ${donnees.data.name}</h3>
+         <p>${donnees.data.capital} </p>
+`        }
+catch(error){
+    result.innerHTML= `<p>${error.message} </p>`
+}
+        }
+    })
+
+// let form= document.querySelector("#form")
+// let todolist= document.querySelector("#todolist")
+// todolist.style.type="disc"
+// todolist.style.gap="30px"
+
+// let bt= document.createElement("button")
+// bt.textContent="supprimer"
+// let st= document.querySelector("#st")
+// st.appendChild(bt)
+// st.style.display="flex"
+// st.style.gap="10px"
+
+// let bt1= document.createElement("button")
+// bt1.textContent="supprimer"
+// let nd= document.querySelector("#nd")
+// nd.appendChild(bt1)
+// nd.style.display="flex "
+// nd.style.gap="10px"
+
+// form.addEventListener("submit", (e)=>{
+//     e.preventDefault()
+//     const entree1= document.querySelector("#entree")
+//  const entree= entree1.value
+     
+// let li= document.createElement("li")
+// li.textContent= `${entree}`
+// todolist.append(li)
+// })
+
+
+
+
+    // let form= document.querySelector("#form")
+    // let message=document.querySelector("#message")
+    // form.addEventListener("submit", (e)=>{
+    //     e.preventDefault()
+    //     const emailinput= document.querySelector("#email")
+    //     const email= emailinput.value.trim()
+    //     //supprime l'espase avant et apres lemail(trim)
+
+    //     if(email===""){
+    //         message.textContent="entrer un email valide"
+    //         message.style.color="red"
+    //         return
+    //     }
+    //     message.textContent= `${email} votre inscription est valide`
+    //     message.style.color="green"
+    //     form.reset()
+    // })
+
+// let bouton= document.querySelector(".btn")
+// let bouton2= document.querySelector(".btn2")
+// function surClick(){console.log("bouton clided")}
+
+// console.log(surClick===surClick)
+
+
+// console.log(function(){}===function(){})// fause par defaut en java script
+// bouton.addEventListener("click",() =>{console.log("bouton clicked")})
+// bouton.removeEventListener("click", surClick)
+
+// let element= document.querySelector(".element")
+// // element.addEvenlister("mouseover",()=>{element.style.border="1px solid black"})
+
+// element.addEventListener("mouseenter",()=>{
+//     element.style.backgroundColor="red"
+// })
+
+
+// element.addEventListener("mouseleave",()=>{
+//     element.style.backgroundColor="black"
+// })
+
+
+
+// element.addEventListener("mouseout",()=>{
+//     element.style.backgroundColor="black"
+// })
+
+
+// element.addEventListener("contextmenu",(event)=>event.preventDefault(){
+//    console.log("click intercepted")
+// })
+
+// let input= document.querySelector(#texte)
+// input.addEventListener("keydown",(event)=>{
+//     if(event.key==="Enter"){
+//         console.log("entre clicker")}
+//         else if(event.key==="f"){console.log("f clicker")}
+//     // console.log("touche enfoncee" +event.key)
+// })
+
+// input.addEventListener("keyup",(event)=>{
+//     input.style.borderColor="black"
+// })
+
+// let formulaire= document.querySelector("#formulaire")
+// formulaire.addEventListener("submit",(event)=>{
+//     event.preventDefault()
+//     console.log("formulaire envoye",input.value)
+// })
+
+// input.addEventListener("input", ()=>{
+//     event.preventDefault()
+//     console.log("saisie cours:",input.value)
+// })
+
+// input.addEventListener("change",()=>{
+//     console.log("valeur finale",input.value)
+
+// })
+
+
+
+
+// let titre = document.querySelector("#titre")
+
+// let description = document.querySelector(".para")
+
+// let title = document.getElementById("titre")
+
+// let button = document.querySelector("button")
+
+// let paragraph = document.getElementsByClassName("para")
+
+// let p = document.getElementsByTagName("p")
+
+// let paras = document.querySelectorAll("p")
+
+
+// // Modifier le contenu du titre
+// titre.innerHTML = "nouveau titre <span>special</span>"
+
+
+// // Afficher les paragraphes
+// console.log(paras)
+
+
+// // Parcourir NodeList
+// paras.forEach((e) => {
+//     console.log(e)
+// })
+
+
+// // Transformer HTMLCollection en tableau
+// let tableau = Array.from(p)
+
+
+// // Parcourir le tableau
+// tableau.forEach((e) => {
+//     console.log(e)
+// })
+
+
+// // Modifier le style
+// titre.style.color = "red"
+
+
+// // Ajouter une classe
+// titre.classList.add("newclass")
+
+
+// // Ajouter ou supprimer "actif"
+// titre.classList.toggle("actif")
+
+
+// // Ajouter ou supprimer "btn"
+// button.classList.toggle("btn")
+
+
+// let milieu = document.querySelector("#milieu")
+// let parent = milieu.parentElement
+
+// console.log("parent"+parent)
+// console.log(milieu.nextElementSibling)
+// console.log(milieu.previousElementSibling)
+// console.log("children"+parent.children)
+// console.log("premier enfant:",parent.firstElementChild)
+// console.log(parent.lastElementChild)
+// titre.outerHTML="nouveau titre <span>special</span>"
+
+// let photo= document.querySelector("img")
+// console.log(photo.getAttribute("src"))
+// console.log(photo.setAttribute("src"," oman.jpeg"))
+// console.log(photo.hasAttribute("alt"))
+// photo.removeAttribute("alt")
+
+// let section4= document.querySelector("#sect4")
+// let liste= document.createElement("ul")
+// let div= document.createElement("div")
+// let li= document.createElement("li")
+// let li2= document.createElement("li")
+// li2.textContent="item 2 last"
+// li.textContent= "item 1 new"
+
+// section4.append(liste,div)
+// liste.appendChild(li)
+// liste.prepend(li2)
+
+// let test1= document.querySelector("#tst1")
+// let test2= document.querySelector("#tst")
+// let test3=document.createElement("p")
+// test3.textContent="new paragraph"
+// section4.insertBefore(test3,test2)
+
+// let copie= liste.cloneNode(true)
+// let copie2= liste.cloneNode(false)
+// console.log(copie)
+// console.log(copie2)
+// liste.append(copie)
+// li.remove()
+//     let titre= document.querySelector("#titre")
+//     let description =document.querySelector(".para")
+//     let title =document.getElementById("titre")
+   
+//     let button= document.querySelector("button")
+   
+
+    
+// // titre.textContent ="nouveau titre <span> special </span>" 
+// titre.innerHTML="nouveau titre <span> special</span> "
+// console.log(paras)
+// titre.style.color ="red"
+// titre.classList.add("newclass")
+// // description.classList.remove("para")
+// titre.classList.toggle("actif")
+// button.classList.toggle("btn")
+
+
+
+//  let paragraph= document.getElementsByClassName("para")
+//  let p=document.getElementsByTagName("p")
+//  let paras = document.querySelectorAll("p")
+
+
+// //  console.log(p)
+// //     console.log(paragraph)
+//     paras.forEach((e)=>{console.log(e)})
+// p.forEach((e)=> console.log(e))
+
+//     console.log(paras)
+// let p = document.getElementsByTagName("p")
+
+// let tableau = Array.from(p)
+
+// tableau.forEach((e) => {
+//     console.log(e)
+// })
+
+
+</script>
+
+<footer></footer></body>
+</html>
